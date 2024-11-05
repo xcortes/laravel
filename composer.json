@@ -1,0 +1,17 @@
+{
+    "name": "laravel/laravel",
+    "type": "project",
+    "description": "The skelton application for the laravel framework",
+    "keywords": ["laravel", "frameworks"],
+    "licence": "MIT",
+    "require": {
+        "php": "^8.2",
+        "laravel/framework": "^11.9",
+        "laravel/tinker": "^2.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}
