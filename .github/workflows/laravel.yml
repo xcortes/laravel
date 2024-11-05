@@ -12,18 +12,18 @@ jobs:
         ports:
           - 3006:3006 
         env:
-        MYSQL_ROOT_PASSWORD: root
-        MYSQL_DATABASE: laravel
+         MYSQL_ROOT_PASSWORD: root
+         MYSQL_DATABASE: laravel
 
-   steps:
-   - name: Checkout 
-     uses: actions/checkout@v3
+    steps:
+    - name: Checkout 
+      uses: actions/checkout@v3
 
-   - name: Set up PHP #Instalar las dependencias del proyecto      
-     uses: shivamathur/setup-php@v2 #Definir la version de PHP
-     witch:
-      php-version: 8.2
-      extentions: mbstring, bcmatch, pdo, pdo_mysql #La versioon viene con PHP, conposer: el cual se debe instalar
+    - name: Set up PHP #Instalar las dependencias del proyecto      
+      uses: shivamathur/setup-php@v2 #Definir la version de PHP
+      with:
+        php-version: 8.2
+        extentions: mbstring, bcmatch, pdo, pdo_mysql #La versioon viene con PHP, conposer: el cual se debe instalar
 
-   - name: Install Packages compposite 
-     run: composer install --no-interaction #Al descargar no requiera ninguna interacción.
+    - name: Install Packages compposite 
+      run: composer install --no-interaction #Al descargar no requiera ninguna interacción.
