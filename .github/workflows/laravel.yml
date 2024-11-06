@@ -25,7 +25,7 @@ jobs:
         php-version: 8.2
         extentions: mbstring, bcmatch, pdo, pdo_mysql #La versioon viene con PHP, conposer: el cual se debe instalar
 
-    - name: Install Packages compposite 
+    - name: Install Packages Conposer
       run: composer install --no-interaction #Al descargar no requiera ninguna interacción.
     
     - name: Set App
@@ -34,5 +34,10 @@ jobs:
     - name: Set key # Setear variable de entorno
       run: php artisan key:generate 
     
-    - name: Run Test
-      run: vendor/bin/phpunit
+    - name: Run Test #Genera las pruebas unitarias
+      id: test
+      run: vendor/bin/phpunit #Por profundizar
+
+    - name: Deploy
+      if: steps.test.outcome == 'success' 
+      run: ls
