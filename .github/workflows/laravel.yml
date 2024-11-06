@@ -29,7 +29,7 @@ jobs:
       run: composer install --no-interaction #Al descargar no requiera ninguna interacción.
     
     - name: Set App
-      run: cp .env-example .env
+      run: cp .env.example .env
     
     - name: Set key # Setear variable de entorno
       run: php artisan key:generate 
