@@ -39,5 +39,5 @@ jobs:
       run: vendor/bin/phpunit #Por profundizar
 
     - name: Deploy
-      if: steps.test.outcome == 'success' 
+      if: steps.test.outcome == 'failure' 
       run: ls
