@@ -32,7 +32,6 @@ jobs:
       run: cp .env.example .env
     
     - name: Set key # Setear variable de entorno
-      id: set
       run: php artisan key:generate 
     
     - name: Run Test #Genera las pruebas unitarias
@@ -40,5 +39,5 @@ jobs:
       run: vendor/bin/phpunit #Por profundizar
 
     - name: Deploy
-      if: steps.set.outcome == 'failure' 
+      if: steps.test.outcome == 'failure' 
       run: ls
