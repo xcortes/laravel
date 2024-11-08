@@ -48,9 +48,9 @@ jobs:
   
     - name: Artifact
       uses: actions/upload-artifact@v4 #Pertmite subir cualquier archivo para posteriormente descargarlo e indagar 
-      if: failure() #Indica true si alguno de los anteriores test a fallado 
+      if: success() #Indica true si alguno de los anteriores test a fallado 
       with: #sirve para pasarle parametros
        name: Artifact #Nombre del archivo
        path: |
         composer.json 
-        storage/log/laravel.log
+        #storage/log/laravel.log
