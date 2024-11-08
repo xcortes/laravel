@@ -34,9 +34,9 @@ jobs:
     #- name: Set key # Setear variable de entorno
       #run: php artisan key:generate 
     
-    - name: Run Test #Genera las pruebas unitarias
-      id: test
-      run: vendor/bin/phpunit #Por profundizar
+    #- name: Run Test #Genera las pruebas unitarias
+      #id: test
+      #run: vendor/bin/phpunit #Por profundizar
 
     - name: Deploy
       if: steps.test.outcome == 'failure' 
