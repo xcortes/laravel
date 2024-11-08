@@ -31,8 +31,8 @@ jobs:
     - name: Set App
       run: cp .env.example .env
     
-    - name: Set key # Setear variable de entorno
-      run: php artisan key:generate 
+    #- name: Set key # Setear variable de entorno
+      #run: php artisan key:generate 
     
     - name: Run Test #Genera las pruebas unitarias
       id: test
