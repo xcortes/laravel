@@ -41,3 +41,12 @@ jobs:
     - name: Deploy
       if: steps.test.outcome == 'failure' 
       run: ls
+
+    - name: Artifact
+      uses: actions/upload-artifact@v3 #Pertmite subir cualquier archivo para posteriormente descargarlo e indagar 
+      with: #sirve para pasarle parametros
+       name: Artifact #Nombre del archivo
+       patch: composer.json 
+
+
+
