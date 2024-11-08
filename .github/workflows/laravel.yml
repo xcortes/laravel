@@ -31,12 +31,14 @@ jobs:
     - name: Set App
       run: cp .env.example .env
     
+    #--Se renombran para prueba Artifact---
     #- name: Set key # Setear variable de entorno
       #run: php artisan key:generate 
     
     #- name: Run Test #Genera las pruebas unitarias
       #id: test
       #run: vendor/bin/phpunit #Por profundizar
+      #--Se renombran para prueba Artifact---
 
     - name: Deploy
       if: steps.test.outcome == 'failure' 
@@ -46,7 +48,4 @@ jobs:
       uses: actions/upload-artifact@v3 #Pertmite subir cualquier archivo para posteriormente descargarlo e indagar 
       with: #sirve para pasarle parametros
        name: Artifact #Nombre del archivo
-       patch: composer.json 
-
-
-
+       path: composer.json 
