@@ -40,12 +40,15 @@ jobs:
       #run: vendor/bin/phpunit #Por profundizar
       #--Se renombran para prueba Artifact---
 
-    - name: Deploy
-      if: steps.test.outcome == 'failure' 
-      run: ls
-
+   # Se puede remplazar por el if, dentro del Artifact
+    #- name: Deploy
+      #if: steps.test.outcome == 'failure' 
+      #run: ls
+   # Se puede remplazar por el if, dentro del Artifact
+  
     - name: Artifact
       uses: actions/upload-artifact@v4 #Pertmite subir cualquier archivo para posteriormente descargarlo e indagar 
+      if: failure() #Indica true si alguno de los anteriores test a fallado 
       with: #sirve para pasarle parametros
        name: Artifact #Nombre del archivo
        path: |
