@@ -53,4 +53,4 @@ jobs:
        name: Artifact #Nombre del archivo
        path: |
         composer.json 
-        #storage/log/laravel.log
+        storage/log/laravel.log
