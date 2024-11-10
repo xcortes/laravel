@@ -1,0 +1,11 @@
+name: Laravel CI V2.
+
+on: [push]
+
+jobs:
+  laravel-testv2:
+    runs-on: ubuntu-latest
+  
+  steps:
+    - name: Ls
+    run: ls -al

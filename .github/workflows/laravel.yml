@@ -1,6 +1,8 @@
 name: Laravel CI
 
-on: [push]
+on:
+  workflow_dispatch:   
+  #[push]
 
 jobs: 
   laravel-test:
