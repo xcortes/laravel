@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   laravel-testv2:
-    runs-on: ubuntu-latest
+    runs-on: macos-13 #Test con Runner Mac 
   
     steps:
       - name: Ls
