@@ -4,7 +4,9 @@ on: [push]
 
 jobs:
   laravel-testv2:
-    runs-on: macos-13 #Test con Runner Mac 
+    runs-on: windows-2019 #Test con Runner Windows
+    #runs-on: macos-13 #Test con Runner Mac 
+    #runs-on: ububtu-latest #Test con Runner Mac
   
     steps:
       - name: Ls
