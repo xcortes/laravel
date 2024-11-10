@@ -10,4 +10,5 @@ jobs:
   
     steps:
       - name: Ls
-        run: ls -al
+        run: dir #Test Windows
+        
