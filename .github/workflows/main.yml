@@ -21,7 +21,7 @@ jobs:
 
         - name: Run Script 
           run: |
-            echo "PHP VERSION${{} matrix.php-version }}"
+            echo "PHP VERSION${{ matrix.php-version }}"
             php -v
         
     
